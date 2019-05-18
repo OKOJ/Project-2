@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 $("#user-sign-up").on("submit", function (e) {
   e.preventDefault();
   $.ajax({
