@@ -19,6 +19,8 @@ module.exports = app => {
     db.Example.create({
       UserId: req.user.id,
       text: req.body.text,
+      price: req.body.price,
+      quantity: req.body.quantity,
       description: req.body.description
     }).then(dbExample => {
       res.json(dbExample);
