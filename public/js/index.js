@@ -1,6 +1,8 @@
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
+var $examplePrice = $("#example-price");
+var $exampleQuantity = $("#example-quantity");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
@@ -66,11 +68,13 @@ var handleFormSubmit = function(event) {
 
   var example = {
     text: $exampleText.val().trim(),
+    price: $examplePrice.val().trim(),
+    quantity: $exampleQuantity.val().trim(),
     description: $exampleDescription.val().trim()
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
+  if (!(example.text || example.price || example.quantity || example.description)) {
+    alert("You must enter an product text, price, quantity, and description!");
     return;
   }
 
@@ -79,6 +83,8 @@ var handleFormSubmit = function(event) {
   });
 
   $exampleText.val("");
+  $examplePrice.val("");
+  $exampleQuantity.val("");
   $exampleDescription.val("");
 };
 
