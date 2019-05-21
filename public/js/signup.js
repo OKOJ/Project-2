@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+
 $("#user-sign-up").on("submit", function (e) {
   e.preventDefault();
   $.ajax({
@@ -14,11 +15,17 @@ $("#user-sign-up").on("submit", function (e) {
           .trim(),
         password: $("#password")
           .val()
-          .trim()
+          .trim(),
+        phone: $("#phone")
+          .val()
+          .trim(),
+        address: $("#address")
+          .val()
+          .trim(),
       }
     })
     .then(function (data) {
-      console.log("going to profile", data);
+      console.log(data);
       window.location.replace(data);
     })
     .catch(function (err) {
