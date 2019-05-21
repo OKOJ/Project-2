@@ -31,7 +31,8 @@ module.exports = (sequelize, DataTypes) => {
     // The address cannot be null
     address: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      
     }
   });
 
