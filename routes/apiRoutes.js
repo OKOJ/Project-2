@@ -72,4 +72,14 @@ module.exports = app => {
     req.logout();
     res.redirect("/login");
   });
+
+  app.get("/api/users", function(req, res) {
+    
+    db.User.findAll({attributes: { exclude: ["password"] }}).then(function(data){
+      console.log(data)
+      res.json(data)
+    })
+  })
 };
+
+
