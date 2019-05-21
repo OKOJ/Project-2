@@ -48,8 +48,11 @@ module.exports = app => {
   app.post("/api/signup", (req, res) => {
     console.log(req.body);
     db.User.create({
+      name: req.body.name,
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      phone: req.body.phone,
+      address: req.body.address
     })
       .then(() => {
         res.redirect(307, "/api/login");
