@@ -1,7 +1,6 @@
 .list-group-item {
   line-height: 2.5;
 }
-<<<<<<< HEAD
 
 
 .navbar.navbar-expand-lg.navbar-light {
@@ -22,7 +21,7 @@
 
 #footer {
   position: sticky;
-  margin-top: 225px;
+  margin-top: 180px;
   margin-bottom: 0;
 
 }
@@ -33,9 +32,8 @@
   padding: 10px;
 
 }
-=======
 #map {
-    height: 400px;  
-    width: 100%;  
+  margin-top: 40px;
+  height: 400px;  
+  width: 100%;  
 } 
->>>>>>> master
