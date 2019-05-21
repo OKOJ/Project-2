@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     // The email cannot be null, and must be a proper email before creation
+    name:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,

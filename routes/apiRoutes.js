@@ -19,6 +19,8 @@ module.exports = app => {
     db.Example.create({
       UserId: req.user.id,
       text: req.body.text,
+      price: req.body.price,
+      quantity: req.body.quantity,
       description: req.body.description
     }).then(dbExample => {
       res.json(dbExample);
@@ -46,7 +48,7 @@ module.exports = app => {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", (req, res) => {
-    console.log(req.body);
+    console.log("api/", req.body);
     db.User.create({
       name: req.body.name,
       email: req.body.email,
@@ -55,16 +57,19 @@ module.exports = app => {
       address: req.body.address
     })
       .then(() => {
-        res.redirect(307, "/api/login");
+        passport.authenticate('local')(req, res, function () {
+          res.send(200, "/profile");
+        })
       })
       .catch(err => {
-        res.status(422).json(err.errors[0].message);
+        console.log(err);
+        res.status(422).json(err);
       });
   });
 
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();
-    res.redirect("/");
+    res.redirect("/login");
   });
 };

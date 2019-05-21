@@ -62,3 +62,5 @@ db.sequelize.sync(syncOptions).then(() => {
 });
 
 module.exports = app;
+
+// Here are my changes

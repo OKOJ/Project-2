@@ -1,7 +1,20 @@
 module.exports = (sequelize, DataTypes) => {
   const Example = sequelize.define("Example", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+    text:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    price:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    quantity:{
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    description:{
+      type: DataTypes.TEXT
+    } 
   });
 
   Example.associate = function(models) {
