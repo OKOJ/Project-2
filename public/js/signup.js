@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-=======
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
->>>>>>> master
+
 $("#user-sign-up").on("submit", function (e) {
   e.preventDefault();
   $.ajax({
@@ -17,7 +15,6 @@ $("#user-sign-up").on("submit", function (e) {
           .trim(),
         password: $("#password")
           .val()
-<<<<<<< HEAD
           .trim(),
         phone: $("#phone")
           .val()
@@ -29,22 +26,12 @@ $("#user-sign-up").on("submit", function (e) {
     })
     .then(function (data) {
       console.log(data);
-=======
-          .trim()
-      }
-    })
-    .then(function (data) {
-      console.log("going to profile", data);
->>>>>>> master
       window.location.replace(data);
     })
     .catch(function (err) {
       console.log(err);
       alert(err.responseText);
     });
-<<<<<<< HEAD
-});
-=======
 });
 
 function initMap() {
@@ -61,4 +48,3 @@ function initMap() {
   var Marker4 = new google.maps.Marker({ position: location3, map: map }); 
   
 } 
->>>>>>> master
