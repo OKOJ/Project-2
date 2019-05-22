@@ -1,33 +1,44 @@
 <div class="row">
-  <div class="col-8 offset-2">
-    <h1>Hello! What would you like to put on a market today.</h1>
-    <form class="clearfix mb-4" action="POST">
-      <div class="form-group">
-        <label for="example-text">Product Name</label>
-        <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Product Name">
+  <div class="col-12 offset-2">
+    <h1>What would you like to put on a market today.</h1>
+    <div class="row">
+      <div class="col-6">
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-text">Product Name</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
+              placeholder="Enter Product Name">
+          </div>
+          <div class="form-group">
+            <label for="example-price">Product Price</label>
+            <input type="text" id="example-price" class="form-control" aria-describedby="example-price"
+              placeholder="Enter Product Price">
+          </div>
+          <div class="form-group">
+            <label for="example-quantity">Quantity</label>
+            <input type="text" id="example-quantity" class="form-control" aria-describedby="example-quantity"
+              placeholder="Enter Product Quantity">
+          </div>
+          <div class="form-group">
+            <label for="example-description">Product Description</label>
+            <textarea class="form-control" id="example-description" aria-describedby="example-description"
+              placeholder="Enter Product Description"></textarea>
+          </div>
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="example-price">Product Price</label>
-        <input type="text" id="example-price" class="form-control" aria-describedby="example-price" placeholder="Enter Product Price">
+      <div class="col-6">
+        <h5>Your market stand:</h5>
+        <br>
+        <ul id="example-list" class="list-group">
+          {{#each user.Examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-outline-success float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
       </div>
-      <div class="form-group">
-        <label for="example-quantity">Quantity</label>
-        <input type="text" id="example-quantity" class="form-control" aria-describedby="example-quantity" placeholder="Enter Product Quantity">
-      </div>
-      <div class="form-group">
-        <label for="example-description">Product Description</label>
-        <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Product Description"></textarea>
-      </div>
-      <button id="submit" class="btn btn-primary float-right">Submit</button>
-    </form>
-    <h3>Your market stand:</h3>
-    <ul id="example-list" class="list-group">
-      {{#each user.Examples}}
-      <li data-id="{{this.id}}" class="list-group-item">
-        <a href="example/{{this.id}}">{{this.text}}</a>
-        <button class="btn btn-danger float-right delete">ｘ</button>
-      </li>
-      {{/each}}
-    </ul>
+    </div>
   </div>
 </div>
