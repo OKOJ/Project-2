@@ -75,11 +75,23 @@ module.exports = app => {
 
   app.get("/api/users", function(req, res) {
     
-    db.User.findAll({attributes: { exclude: ["password"] }}).then(function(data){
+    db.User.findAll({
+      include: [db.Example],
+      attributes: { 
+        exclude: ["password"] 
+      }
+    }).then(function(data){
       console.log(data)
       res.json(data)
     })
   })
+  // app.get("/api/example/:id", function(req, res) {
+    
+  //   db.Example.findAll({attributes: []}).then(function(data){
+  //     console.log(data)
+  //     res.json(data)
+  //   })
+  // })
 };
 
 
