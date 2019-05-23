@@ -5,6 +5,7 @@ var $examplePrice = $("#example-price");
 var $exampleQuantity = $("#example-quantity");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+var $exampleImage =  $("#example-image");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -70,10 +71,11 @@ var handleFormSubmit = function(event) {
     text: $exampleText.val().trim(),
     price: $examplePrice.val().trim(),
     quantity: $exampleQuantity.val().trim(),
-    description: $exampleDescription.val().trim()
+    description: $exampleDescription.val().trim(),
+    image: $exampleImage.val().trim()
   };
 
-  if (!(example.text || example.price || example.quantity || example.description)) {
+  if (!(example.text || example.price || example.quantity || example.description || $exampleImage)) {
     alert("You must enter an product text, price, quantity, and description!");
     return;
   }
