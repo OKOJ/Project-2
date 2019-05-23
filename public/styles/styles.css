@@ -1,26 +1,57 @@
+html,body{
+  width: fit-content;
+  height: fit-content;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
 
-.navbar-brand{
+.brand {
+  line-height: 1;
+  margin-left: 65px;
+}
+
+#market {
+  font-size: 22px;
+  margin-left: 55rem;
+  margin-right: 2rem;
+  padding-top: 15px;
+}
+
+.navbar-brand {
   font-family: 'Cabin Sketch', cursive;
   font-size: 50px;
 }
+
 h6 {
   font-family: 'Lato', sans-serif;
   margin-left: 150px;
   line-height: 0;
   font-size: 10px;
 }
-#navbarNav{
-  font-size: 30px;
-  text-align: justify;
+
+#navbarNav {
+  font-size: 25px;
+  width: fit-content;
+}
+
+#signup{
+  width: 100px;
+  margin-right: 20px;
+  color: black;
+}
+
+#login{
+  width: 100px;
+  margin-right: 20px;
+  color: black;
 }
 
 .text {
   background-color: #f8f9fa;
   color: black;
-  font-size:24px;
+  font-size: 24px;
   font-weight: inherit;
   margin: 0 auto;
   padding: 33px;
@@ -36,7 +67,7 @@ h6 {
 .text-link {
   background-color: #f8f9fa;
   color: black;
-  font-size:34px;
+  font-size: 34px;
   font-weight: inherit;
   margin: 0 auto;
   padding: 10px;
@@ -49,39 +80,44 @@ h6 {
   mix-blend-mode: screen;
 }
 
-#buy{
+#buy {
   font-family: 'Cabin Sketch', cursive;
   color: black;
-  padding-left: 10px;
-  padding-right: 140px;
+  margin-right: 75px;
 }
 
-#sell{
+#sell {
   font-family: 'Cabin Sketch', cursive;
   color: black;
-  padding-left: 140px;
-  padding-right: 10px;
+  margin-left: 75px;
 }
 
 .navbar.navbar-expand-lg.navbar-light {
   /* font-family: 'Sriracha', cursive; */
   background-color: yellowgreen;
   height: 100px;
+  width: 100%;
   /* margin-bottom: 10px; */
 
 }
-.container {
+
+/* .container { 
   font-family: 'Sriracha', cursive;
-  height: 160px;
+  height: -webkit-fill-available;
+}*/
 
+.card.bg-dark {
+  margin-top: 40px;
+  margin-left: 40px;
+  padding: 0;
 }
 
-.card.bg-dark{
-  margin-top: 70px;
+.main {
+  height: -webkit-fill-available;
 }
-.main{
-   min-height: calc(100vh - 120px);
-   /* position: relative;*/
+
+a {
+  color: black;
 }
 
 #footer {
@@ -90,65 +126,84 @@ h6 {
   left: 0;
   bottom: 0;
   width: 100%;
-
-
+  height: 175px;
 }
 
-.card-overlay {
+.footer-social {
+  margin-left: 60px;
+  width: 15%;
+}
+
+.copyright {
+  width: 19%;
+  margin-left: 80rem;
+  margin-top: -7rem;
+}
+
+.card {
   background-color: yellowgreen;
   height: fit-content;
   padding: 10px;
-
 }
 
-svg{
+svg {
 
   vertical-align: bottom;
 }
+
 #map {
   margin-top: 40px;
-  height:500px;  
-  width: 100%;  
-} 
+  height: 500px;
+  width: 100%;
+}
 
 .card-title {
   margin-right: 100px;
 }
-/* animated text*/
-/* @import url(https://fonts.googleapis.com/css?family=Lato:700); */
 
-*, *:before, *:after {
+/* animated text*/
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
+
 h1 {
   font-family: 'Cabin Sketch', cursive;
   font-size: 55px;
   margin: 0;
   text-transform: uppercase;
 }
-h3{
+
+h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 40px;
   margin: 0;
 }
+
 h1.slider {
   margin-bottom: 100px;
   margin-top: 10px;
   margin-right: 250px;
 }
-span { 
+
+span {
   opacity: 0;
   float: left;
   margin-left: -200px;
   position: absolute;
-  
-  -webkit-transition: opacity .5s, margin-left 1s; /* Safari */
+
+  -webkit-transition: opacity .5s, margin-left 1s;
+  /* Safari */
   transition: opacity .5s, margin-left 1s;
 }
-span.active { 
+
+span.active {
   margin-left: 0;
-  opacity: 1; 
+  opacity: 1;
 }
+
 span.next {
   margin-left: 100px;
 }
