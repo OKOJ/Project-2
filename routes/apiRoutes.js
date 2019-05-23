@@ -21,7 +21,8 @@ module.exports = app => {
       text: req.body.text,
       price: req.body.price,
       quantity: req.body.quantity,
-      description: req.body.description
+      description: req.body.description,
+      image: req.body.image
     }).then(dbExample => {
       res.json(dbExample);
     });
