@@ -1,6 +1,6 @@
 html,body{
-  width: fit-content;
-  height: fit-content;
+      width: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 
 .list-group-item {
@@ -9,14 +9,24 @@ html,body{
 
 .brand {
   line-height: 1;
-  margin-left: 65px;
+  margin-left: 45px;
+  margin-right: 10px;
+  
+}
+#logo{
+  font-size: 60px;
 }
 
 #market {
+  font-family: 'Sriracha', cursive;
   font-size: 22px;
-  margin-left: 55rem;
-  margin-right: 2rem;
+  margin-left: 40rem;
+  margin-right: 5rem;
   padding-top: 15px;
+  color: orangered;
+}
+.clicked{
+  font-size: 35px;
 }
 
 .navbar-brand {
@@ -28,44 +38,62 @@ h6 {
   font-family: 'Lato', sans-serif;
   margin-left: 150px;
   line-height: 0;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 #navbarNav {
   font-size: 25px;
   width: fit-content;
+  margin-left: 2rem;
+}
+
+#profile{
+  width: 250px;
+  font-size: 22px;
+  color: black;
+  padding-top: 15px;
+  font-family: 'Sriracha', cursive;
 }
 
 #signup{
-  width: 100px;
+  font-size: 22px;
+  width: 105px;
   margin-right: 20px;
   color: black;
 }
 
 #login{
+  font-size: 22px;
   width: 100px;
-  margin-right: 20px;
+  margin-right: 22px;
+  color: black;
+}
+
+#logout{
+  font-size: 22px;
+  width: 100px;
+  margin-right: 22px;
   color: black;
 }
 
 .text {
-  background-color: #f8f9fa;
-  color: black;
-  font-size: 24px;
-  font-weight: inherit;
-  margin: 0 auto;
-  padding: 33px;
-  width: 30%;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-220%, -50%);
-  mix-blend-mode: screen;
+  background-color: yellowgreen;
+    color: white;
+    font-size: 24px;
+    font-weight: inherit;
+    margin: 0 auto;
+    padding: 33px;
+    width: 40%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-211%, -50%);
+    mix-blend-mode: screen;
 }
 
 .text-link {
-  background-color: #f8f9fa;
+  background-color: yellowgreen;
   color: black;
   font-size: 34px;
   font-weight: inherit;
@@ -76,7 +104,7 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(22%, 313%);
+  transform: translate(22%, 317%);
   mix-blend-mode: screen;
 }
 
@@ -96,28 +124,40 @@ h6 {
   /* font-family: 'Sriracha', cursive; */
   background-color: yellowgreen;
   height: 100px;
-  width: 100%;
+  /* width: 109%; */
+  /* position: inherit; */
   /* margin-bottom: 10px; */
-
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* height: 175px */
 }
 
-/* .container { 
+h2 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.container { 
   font-family: 'Sriracha', cursive;
   height: -webkit-fill-available;
-}*/
+  padding-top: 7rem;
+}
 
 .card.bg-dark {
   margin-top: 40px;
-  margin-left: 40px;
+  margin-left: 140px;
   padding: 0;
 }
 
-.main {
-  height: -webkit-fill-available;
-}
+
 
 a {
   color: black;
+}
+
+.btn {
+  background-color: green;
 }
 
 #footer {
@@ -136,7 +176,7 @@ a {
 
 .copyright {
   width: 19%;
-  margin-left: 80rem;
+  margin-left: 81rem;
   margin-top: -7rem;
 }
 
@@ -152,8 +192,8 @@ svg {
 }
 
 #map {
-  margin-top: 40px;
-  height: 500px;
+  margin-top: 15px;
+  height: 600px;
   width: 100%;
 }
 

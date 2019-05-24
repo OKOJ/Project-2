@@ -10,13 +10,14 @@
     href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato|Montserrat|Sriracha|Open+Sans:300,600|Oswald&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="icon" href="\img\Screen Shot 2019-05-19 at 11.51.46 AM.png" type="image/gif" sizes="24x24">
   <title>Market</title>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="brand">
-      <a class="navbar-brand" href="/">Micro Market</a>
+      <a class="navbar-brand" id="logo" href="/">Micro Market</a>
       <h6>from our garden to YOUR table</h6>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,23 +26,23 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item text-right">
-          <a class="nav-link" id="market" href="/market">Marketplace</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        {{#unless user}}
-        <li class="nav-item">
-          <a class="nav-link" id="signup" href="/signup">Sign up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="login" href="/login">Login</a>
-        </li>
-        {{/unless}}
         {{#if user}}
         <li class="nav-item">
           <a class="nav-link" id="profile" href="/profile">Hello {{user.name}}</a>
         </li>
+        {{/if}}
+      </ul>
+      <a class="nav-link" id="market" href="/market">Marketplace</a>
+      <ul class="navbar-nav">
+        {{#unless user}}
+        <li class="nav-item">
+          <a class="nav-link" id="signup" href="/signup">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="login" href="/login">Log In</a>
+        </li>
+        {{/unless}}
+        {{#if user}}
         <li class="nav-item">
           <a class="nav-link" id="logout" href="/logout">Logout</a>
         </li>
@@ -99,12 +100,9 @@
             <p>&copy; 2019 da-underdogz team</p>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
-
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -116,6 +114,7 @@
   <script src="/js/index.js"></script>
   <script src="/js/signup.js"></script>
   <script src="/js/login.js"></script>
+
 </body>
 
 </html>
