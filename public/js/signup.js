@@ -49,13 +49,8 @@ function getUsers() {
 }
 getUsers()
 
-// function getFullName(item) {
-//   var fullname = [item.firstname, item.lastname].join(" ");
-//   return fullname;
-// // }
-
 function getProduct(productStand) {
-  var product = [productStand.text, productStand.price, productStand.quantity, productStand.description].join('<div></div>');
+  var product = [productStand.text, productStand.image, productStand.price, productStand.quantity, productStand.description].join('<div></div>');
   return product;
 }
 
@@ -78,7 +73,12 @@ function createPins(user) {
           </div>
           <h1 id="firstHeading" class="firstHeading">Market Stand</h1>
           <div id="bodyContent">
-          Products: <li>${user.Examples.map(getProduct)}</li>
+          <h5>Address:</h5>
+           ${user.address}
+          <h5>Phone:</h5>
+           ${user.phone}
+          <h5>Products:</h5>
+          ${user.Examples.map(getProduct)}
           </div>
         </div>
         `;
