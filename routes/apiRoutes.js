@@ -1,7 +1,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-
+const Op = require("Sequelize").Op
 module.exports = app => {
   // Get all examples
   app.get("/api/examples", isAuthenticated, (req, res) => {
@@ -86,13 +86,19 @@ module.exports = app => {
       res.json(data)
     })
   })
-  // app.get("/api/example/:id", function(req, res) {
-    
-  //   db.Example.findAll({attributes: []}).then(function(data){
-  //     console.log(data)
-  //     res.json(data)
-  //   })
-  // })
-};
-
-
+  // the code below will remove data from the DB every **2 DAYS**
+  app.delete("/api/expiration", function (req, res) {
+    console.log("expired stuff start")
+    var date = Date.now() - 172800000;
+    db.Example.destroy({
+      where: {
+        createdAt: {
+          [Op.lt]: [date]
+        }
+      }
+    }).then(function (data) {
+      console.log(data)
+      res.json(data)
+    })
+  })
+}
