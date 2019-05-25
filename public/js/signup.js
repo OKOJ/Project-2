@@ -50,7 +50,7 @@ function getUsers() {
 getUsers()
 
 function getProduct(productStand) {
-  var product = [productStand.text, productStand.image, productStand.price, productStand.quantity, productStand.description].join('<div></div>');
+  var product = [productStand.text, productStand.image, productStand.price, productStand.quantity, productStand.description].join("<div></div>");
   return product;
 }
 
