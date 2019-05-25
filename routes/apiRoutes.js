@@ -1,7 +1,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-const Op = require("Sequelize").Op
+const Op = require("sequelize").Op
 module.exports = app => {
   // Get all examples
   app.get("/api/examples", isAuthenticated, (req, res) => {
