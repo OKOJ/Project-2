@@ -75,8 +75,8 @@ var handleFormSubmit = function(event) {
     image: $exampleImage.val().trim()
   };
 
-  if (!(example.text || example.price || example.quantity || example.description || $exampleImage)) {
-    alert("You must enter an product text, price, quantity, and description!");
+  if (!(example.text || example.price || example.quantity)) {
+    alert("You must enter an product text, price, and quantity!");
     return;
   }
 
@@ -88,6 +88,7 @@ var handleFormSubmit = function(event) {
   $examplePrice.val("");
   $exampleQuantity.val("");
   $exampleDescription.val("");
+  $exampleImage.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
