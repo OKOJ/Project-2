@@ -49,10 +49,10 @@ function getUsers() {
 }
 getUsers()
 
-function getProduct(productStand) {
-  var product = [productStand.text, productStand.image, productStand.price, productStand.quantity, productStand.description].join("<div></div>");
-  return product;
-}
+// function getProduct(productStand) {
+//   var product = [productStand.text].join("<div></div>");
+//   return product;
+// }
 
 function createPins(user) {
 
@@ -66,7 +66,11 @@ function createPins(user) {
       map: map
     });
     marker.addListener('click', function () {
-
+      console.log(user.Examples)
+      var product = (user.Examples)
+      for (var i = 0; i < product.length; i ++) {
+        console.log(product[i]);
+      
       var contentString = `
         <div id="content">
           <div id="siteNotice">
@@ -78,11 +82,13 @@ function createPins(user) {
           <h5>Phone:</h5>
            ${user.phone}
           <h5>Products:</h5>
-          ${user.Examples.map(getProduct)}
+          <a href="/example/${product[i].id}">
+          ${user.Examples[i].text}</a>
           </div>
         </div>
-        `;
-        // console.log(user.Examples)
+      
+        `;}
+      // console.log(user.Examples)
       var infowindow = new google.maps.InfoWindow({
         content: contentString
       });
