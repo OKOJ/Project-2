@@ -23,8 +23,10 @@
           {{!-- Working on this - Corbin --}}
           <div class="form-group">
             <label for="example-quantity">Product Image</label>
-            <input type="text" id="example-image" class="form-control" aria-describedby="example-image"
-              placeholder="Add Image URL">
+            <input type="file" id="example-image" class="form-control" aria-describedby="example-image" onchange="previewFile()">
+            <img src="" height="200" alt="Image preview...">
+            {{!-- <input type="text" id="example-image" class="form-control" aria-describedby="example-image"
+              placeholder="Add Image URL"> --}}
           </div>
           {{!-- End of working area - Corbin --}}
 
@@ -52,3 +54,19 @@
     </div>
   </div>
 </div>
+<script>
+  window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          var img = document.querySelector('img');  // $('img')[0]
+          img.src = URL.createObjectURL(this.files[0]); // set src to file url
+          img.onload = imageIsLoaded; // optional onload event listener
+      }
+  });
+});
+
+function imageIsLoaded(e) { alert(e); }
+   //function previewFile(){
+   //
+  //previewFile();  //calls the function named previewFile() --}}
+  </script>
