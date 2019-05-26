@@ -2,4 +2,5 @@
 
 
 # Authors
-<img width="90" alt="Screen Shot 2019-05-26 at 2 53 55 PM" src="https://user-images.githubusercontent.com/43624894/58387061-53576780-7fc6-11e9-8d5f-6d71570bf39f.png"> Team.
+<img width="223" alt="Screen Shot 2019-05-26 at 2 59 40 PM" src="https://user-images.githubusercontent.com/43624894/58387102-f90ad680-7fc6-11e9-9197-0f192da513dd.png">
+See list of [Contributors](https://github.com/OKOJ/Project-2/graphs/contributors)
