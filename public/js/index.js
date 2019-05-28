@@ -39,7 +39,7 @@ var refreshExamples = function() {
     var $examples = data.map(function(example) {
       var $a = $("<a>")
         .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .attr("href", "/example/",+ example.id);
 
       var $li = $("<li>")
         .attr({

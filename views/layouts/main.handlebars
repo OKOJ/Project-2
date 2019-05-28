@@ -4,43 +4,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link
     href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Lato|Montserrat|Sriracha|Open+Sans:300,600|Oswald&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="/styles/reset.css">
   <link rel="stylesheet" href="/styles/styles.css">
   <link rel="icon" href="\img\Screen Shot 2019-05-19 at 11.51.46 AM.png" type="image/gif" sizes="24x24">
-  <title>Market</title>
+  <title> Micro Market</title>
 </head>
 
 <body>
   <div>
     <div class="d-flex mb-3">
       <nav class="navbar navbar-expand-lg navbar-light">
+
         <div class="brand p-2 mr-auto">
           <a class="navbar-brand" id="logo" href="/">Micro Market</a>
           <h6>from our garden to YOUR table</h6>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
         <div class="collapse navbar-collapse p-2" id="navbarNav">
           <ul class="navbar-nav mr-auto">
             {{#if user}}
             <li class="nav-item">
-              <a class="nav-link" id="profile" href="/profile">Hello {{user.name}}</a>
+              <a class="nav-link" id="profile" href="/profile">Hello {{user.name}}<span
+                  class="sr-only">(current)</span></a>
             </li>
             {{/if}}
           </ul>
-          <a class="nav-link" id="market" href="/market">Marketplace <img src="https://img.icons8.com/color/30/000000/marker.png"></a>
+          <a class="nav-link" id="market" href="/market">Marketplace <img
+              src="https://img.icons8.com/color/30/000000/marker.png"></a>
           <ul class="navbar-nav">
             {{#unless user}}
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                for Vendors
+                Sell
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="nav-link" id="signup" href="/signup">Sign Up</a>
@@ -55,6 +60,8 @@
             {{/if}}
           </ul>
         </div>
+
+
       </nav>
     </div>
 
@@ -66,7 +73,8 @@
         <div class="card d-flex bm-3 " id="footer">
           <div class="subscribe">
             <div class="subscribe col-4  p-2 mr-auto ">
-               <p>Be part of  <a class="navbar-brand" id="news" href="/">Micro Market</a>community. Join our newsletter.</p>
+              <p>Be part of <a class="navbar-brand" id="news" href="/">Micro Market</a>community. Join our newsletter.
+              </p>
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Your Email" aria-label="Recipient's username"
                   aria-describedby="button-addon2">

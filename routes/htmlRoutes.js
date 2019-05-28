@@ -34,6 +34,9 @@ module.exports = app => {
     });
   });
 
+  //Load market stand page
+  app.get("/marketstand",(req,res) => res.render("marketstand",{ user: req.user}));
+
   // Render 404 page for any unmatched routes
   app.get("*", (req, res) => res.render("404"));
 };

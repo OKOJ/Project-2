@@ -1,72 +1,71 @@
 <div class="row">
-  <div class="col-12">
-    <h2>What would you like to put on a market today.</h2>
-    <div class="row">
-      <div class="col-6">
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Product Name</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-              placeholder="Enter Product Name">
-          </div>
-          <div class="form-group">
-            <label for="example-price">Product Price</label>
-            <input type="text" id="example-price" class="form-control" aria-describedby="example-price"
-              placeholder="Enter Product Price">
-          </div>
-          <div class="form-group">
-            <label for="example-quantity">Quantity</label>
-            <input type="text" id="example-quantity" class="form-control" aria-describedby="example-quantity"
-              placeholder="Enter Product Quantity">
-          </div>
-
-          {{!-- Working on this - Corbin --}}
-          <div class="form-group">
-            <label for="example-quantity">Product Image</label>
-            <input type="file" id="example-image" class="form-control" aria-describedby="example-image" onchange="previewFile()">
-            <img src="" height="200" alt="Image preview...">
+  <div class="d-flex">
+    <div class="col-12">
+      <h1>What would you like to put on a market today.</h1>
+      <div class="row">
+        <div class="col-6">
+          <form class="clearfix mb-4" action="POST">
+            <div class="form-group mb-4">
+              <label for="example-text">Product Name</label>
+              <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
+                placeholder="Enter Product Name">
+            </div>
+            <div class="form-group mb-4">
+              <label for="example-price">Product Price</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+                </div>
+                <input type="text" class="form-control" id="example-price" placeholder="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-4">
+              <label for="example-quantity">Quantity</label>
+              <input type="text" id="example-quantity" class="form-control" aria-describedby="example-quantity"
+                placeholder="Enter Product Quantity">
+            </div>
+            <div class="form-group mb-4">
+              <label for="example-quantity">Product Image</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="example-image"
+                    aria-describedby="inputGroupFileAddon04">
+                  <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                </div>
+              </div>
+            </div>
+            {{!-- Working on this - Corbin --}}
+            {{!-- <label for="example-quantity">Product Image</label> --}}
+            {{!--  <input type="file" id="example-image" class="form-control" aria-describedby="example-image"
+              onchange="previewFile()">
+            <img src="" height="200" alt="Image preview..."> --}}
             {{!-- <input type="text" id="example-image" class="form-control" aria-describedby="example-image"
-              placeholder="Add Image URL"> --}}
-          </div>
-          {{!-- End of working area - Corbin --}}
-
-
-          <div class="form-group">
-            <label for="example-description">Product Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description"
-              placeholder="Enter Product Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-      </div>
-      <div class="col-6">
-        <h5>Your market stand:</h5>
-        <br>
-        <ul id="example-list" class="list-group">
-          {{#each user.Examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-outline-success float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+                placeholder="Add Image URL">--}}
+            {{!-- End of working area - Corbin --}}
+            <div class="form-groupmb-4">
+              <label for="example-description">Product Description</label>
+              <textarea class="form-control" id="example-description" aria-describedby="example-description"
+                placeholder="Enter Product Description"></textarea>
+            </div>
+            <button id="submit" class="btn float-right">Submit</button>
+          </form>
+        </div>
+        <div class="col-6">
+          <a class="link" href="/marketstand"><h5>Your market stand:</h5></a>
+          <br>
+          <ul id="example-list" class="list-group">
+            {{#each user.Examples}}
+            <li data-id="{{this.id}}" class="list-group-item mb-2">
+              <a href="example/{{this.id}}">{{this.text}}</a>
+              <button class="btn btn-outline-success float-right delete">ｘ</button>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<script>
-  window.addEventListener('load', function() {
-  document.querySelector('input[type="file"]').addEventListener('change', function() {
-      if (this.files && this.files[0]) {
-          var img = document.querySelector('img');  // $('img')[0]
-          img.src = URL.createObjectURL(this.files[0]); // set src to file url
-          img.onload = imageIsLoaded; // optional onload event listener
-      }
-  });
-});
-
-function imageIsLoaded(e) { alert(e); }
-   //function previewFile(){
-   //
-  //previewFile();  //calls the function named previewFile() --}}
-  </script>
