@@ -30,7 +30,11 @@ module.exports = app => {
 
   // Delete an example by id
   app.delete("/api/examples/:id", isAuthenticated, (req, res) => {
-    db.Example.destroy({ where: { id: req.params.id } }).then(dbExample => {
+    db.Example.destroy({ 
+      where: {
+         id: req.params.id 
+      } 
+    }).then(dbExample => {
       res.json(dbExample);
     });
   });
@@ -74,18 +78,32 @@ module.exports = app => {
     res.redirect("/");
   });
 
+  // Get all users
   app.get("/api/users", function(req, res) {
-    
     db.User.findAll({
       include: [db.Example],
       attributes: { 
         exclude: ["password"] 
       }
     }).then(function(data){
-      console.log(data)
+      //console.log(data)
       res.json(data)
     })
   })
+
+  // // Get users by id
+  // app.get("/api/users/:id", function(req,res){
+  //   db.User.findOne({
+  //     where: {
+  //       id:req.params.id
+  //     },
+  //     include: [db.Example]
+  //   }).then(function(dbUser) {
+  //     res.json(dbUser);
+  //   })
+  // })
+
+
   // the code below will remove data from the DB every **2 DAYS**
   app.delete("/api/expiration", function (req, res) {
     console.log("expired stuff start")
