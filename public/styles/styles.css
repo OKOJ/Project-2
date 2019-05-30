@@ -29,7 +29,7 @@ h6 {
 #market {
   font-family: 'Sriracha', cursive;
   font-size: 26px;
-  color: orangered;
+  color: darkgreen;
 }
 
 .navbar-brand {
@@ -46,7 +46,7 @@ h6 {
 
 #signup {
   font-size: 22px;
-  color: black;
+  color: darkgreen;
   padding-top: 15px;
   font-family: 'Sriracha', cursive;
 }
@@ -333,6 +333,15 @@ h2 {
 
 .hide {
   display: none;
+}
+
+h4.infoWindow {
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.infoWindowProducts {
+  font-weight: bold;
 }
 
 /* sign in page end*/

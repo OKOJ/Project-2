@@ -70,21 +70,22 @@ function createPins(user) {
       var products = (user.Examples)
       var items = "";
       for (var i = 0; i < products.length; i++) {
-        items += `<a href="/example/${products[i].id}">
-               ${products[i].text}</a>`
+        items += `<a class="infoWindowProducts" href="/example/${products[i].id}">
+               ${products[i].text}</a> ||
+                `
       }
       var contentString = `
         <div id="content">
           <div id="siteNotice">
           </div>
-          <h1 id="firstHeading" class="firstHeading">Market Stand</h1>
+          <h2 id="firstHeading" class="firstHeading"><a href="/marketstand">Market Stand</a></h2>
           <div id="bodyContent">
-         <p> <h5>Address:${user.address}</h5>  
+          <h4 class="infoWindow">Address:</h4> ${user.address}
            
-          <h5>Phone: ${user.phone}</h5>
+          <h4 class="infoWindow">Contact:</h4> ${user.phone}
            
-          <h5>Products:</h5>
-          ${items}
+          <h4 class="infoWindow">Products:</h4> ${items}
+          
           </div>
           </div>
           `
