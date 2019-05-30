@@ -5,6 +5,8 @@ module.exports = app => {
   app.get("/", (req,res) => res.render("front",{ user: req.user}));
   //Load market page
   app.get("/market",(req,res) => res.render("market",{ user: req.user}));
+  //Load signin-login page
+  app.get("/signin-login",(req,res) => res.render("signin-login"));
   // Load signup page
   app.get("/signup", (req, res) => res.render("signup"));
 
