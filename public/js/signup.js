@@ -67,28 +67,29 @@ function createPins(user) {
     });
     marker.addListener('click', function () {
       console.log(user.Examples)
-      var product = (user.Examples)
-      for (var i = 0; i < product.length; i ++) {
-        console.log(product[i]);
-      
+      var products = (user.Examples)
+      var items = "";
+      for (var i = 0; i < products.length; i++) {
+        items += `<a href="/example/${products[i].id}">
+               ${products[i].text}</a>`
+      }
       var contentString = `
         <div id="content">
           <div id="siteNotice">
           </div>
           <h1 id="firstHeading" class="firstHeading">Market Stand</h1>
           <div id="bodyContent">
-          <h5>Address:</h5>
-           ${user.address}
-          <h5>Phone:</h5>
-           ${user.phone}
+         <p> <h5>Address:${user.address}</h5>  
+           
+          <h5>Phone: ${user.phone}</h5>
+           
           <h5>Products:</h5>
-          <a href="/example/${product[i].id}">
-          ${user.Examples[i].text}</a>
+          ${items}
           </div>
-        </div>
-      
-        `;}
-      // console.log(user.Examples)
+          </div>
+          `
+          
+         
       var infowindow = new google.maps.InfoWindow({
         content: contentString
       });
