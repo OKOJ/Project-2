@@ -29,7 +29,6 @@ h6 {
 #market {
   font-family: 'Sriracha', cursive;
   font-size: 26px;
-  color: darkgreen;
 }
 
 .navbar-brand {
@@ -46,7 +45,7 @@ h6 {
 
 #signup {
   font-size: 22px;
-  color: darkgreen;
+  color: black;
   padding-top: 15px;
   font-family: 'Sriracha', cursive;
 }
@@ -165,29 +164,21 @@ a {
   color: white;
   font-family: sans-serif;
 }
-
-/* footer */
-.footer {
-  position: fixed !important;
-  z-index: 100;
-  text-align: center;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-}
-
-#news {
-  font-size: 22px;
-}
-
-.copyright {
-  margin-top: -4rem;
-}
-
 .card {
   background-color: yellowgreen;
   height: fit-content;
   padding: 10px 30px 10px 30px;
+}
+
+/* footer */
+footer{
+  background-color: yellowgreen;
+  font-family: sans-serif;
+}
+
+#news {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 22px;
 }
 
 svg {
@@ -253,10 +244,6 @@ h1.slider span.next {
   height: 600px;
   display: inline-flex;
   margin-top: 85px;
-  width: 100%;
-}
-
-.row{
   width: 100%;
 }
 
