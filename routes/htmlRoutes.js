@@ -36,6 +36,7 @@ module.exports = app => {
     });
   });
 
+
   //Load market stand page
   app.get("/marketstand",(req,res) => res.render("marketstand",{ user: req.user}));
 

@@ -41,6 +41,7 @@ function getUsers() {
     method: "GET",
     url: "/api/users"
   }).then(function (data) {
+    console.log("++++++++++++++++++")
     console.log(data)
     for (let i = 0; i < data.length; i++) {
       createPins(data[i])
@@ -78,7 +79,7 @@ function createPins(user) {
         <div id="content">
           <div id="siteNotice">
           </div>
-          <h2 id="firstHeading" class="firstHeading"><a href="/marketstand">Market Stand</a></h2>
+          <h2 id="firstHeading" class="firstHeading"><a href="#">Market Stand</a></h2>
           <div id="bodyContent">
           <h4 class="infoWindow">Address:</h4> ${user.address}
            
