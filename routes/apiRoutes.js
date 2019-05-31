@@ -30,10 +30,10 @@ module.exports = app => {
 
   // Delete an example by id
   app.delete("/api/examples/:id", isAuthenticated, (req, res) => {
-    db.Example.destroy({ 
+    db.Example.destroy({
       where: {
-         id: req.params.id 
-      } 
+        id: req.params.id
+      }
     }).then(dbExample => {
       res.json(dbExample);
     });
@@ -56,12 +56,12 @@ module.exports = app => {
     console.log("#################################")
     console.log("api/", req.body);
     db.User.create({
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password,
-      phone: req.body.phone,
-      address: req.body.address
-    })
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        phone: req.body.phone,
+        address: req.body.address
+      })
       .then(() => {
         passport.authenticate('local')(req, res, function () {
           res.send(200, "/profile");
@@ -80,13 +80,13 @@ module.exports = app => {
   });
 
   // Get all users
-  app.get("/api/users", function(req, res) {
+  app.get("/api/users", function (req, res) {
     db.User.findAll({
       include: [db.Example],
-      attributes: { 
-        exclude: ["password"] 
+      attributes: {
+        exclude: ["password"]
       }
-    }).then(function(data){
+    }).then(function (data) {
       //console.log(data)
       res.json(data)
     })

@@ -5,7 +5,7 @@ body {
   height: -webkit-fill-available;
 }
 
-.navbar-dark{
+.navbar-dark {
   background-color: yellowgreen;
   color: black;
 }
@@ -22,7 +22,7 @@ body {
 #logo {
   font-size: 60px;
   color: black;
-} 
+}
 
 h6 {
   font-family: 'Lato', sans-serif;
@@ -136,7 +136,7 @@ label {
   margin-bottom: 12px;
 }
 
-#marketstand-profile{
+#marketstand-profile {
   margin-top: 130px;
   margin-left: 10rem;
 }
@@ -145,7 +145,7 @@ label {
   margin-top: 30px;
 }
 
-.col-md-12{
+.col-md-12 {
   width: max-content;
 }
 
@@ -158,6 +158,7 @@ a {
   color: white;
   font-family: sans-serif;
 }
+
 .card {
   background-color: yellowgreen;
   height: fit-content;
@@ -165,7 +166,7 @@ a {
 }
 
 /* footer */
-footer{
+footer {
   background-color: yellowgreen;
   font-family: sans-serif;
 }
