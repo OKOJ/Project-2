@@ -10,7 +10,7 @@ module.exports = app => {
     db.Items.findOne({
       productName: req.body.productName
     }).then(function (response) {
-      console.log(response.dataValues)
+      //console.log(response.dataValues)
       res.render("searchResults", {
         items: response
       })
@@ -23,6 +23,8 @@ module.exports = app => {
       res.json(response)
     })
   })
+
+
   // Get all examples
   app.get("/api/examples", isAuthenticated, (req, res) => {
     db.Example.findAll({

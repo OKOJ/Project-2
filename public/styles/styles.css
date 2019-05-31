@@ -164,6 +164,7 @@ a {
   color: white;
   font-family: sans-serif;
 }
+
 .card {
   background-color: yellowgreen;
   height: fit-content;
@@ -171,7 +172,7 @@ a {
 }
 
 /* footer */
-footer{
+footer {
   background-color: yellowgreen;
   font-family: sans-serif;
 }
@@ -363,7 +364,8 @@ h4.infoWindow {
 
 .searchTerm {
   width: 100%;
-  border: 3px solid #00B4CC;
+  border: 3px solid yellowgreen;
+  ;
   border-right: none;
   padding: 5px;
   height: 35px;
@@ -373,14 +375,16 @@ h4.infoWindow {
 }
 
 .searchTerm:focus {
-  color: #00B4CC;
+  color: yellowgreen;
+  ;
 }
 
 .searchButton {
-  width: 40px;
+  width: 30px;
   height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
+  border: 1px solid yellowgreen;
+  ;
+  background: yellowgreen;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -388,11 +392,10 @@ h4.infoWindow {
   font-size: 20px;
 }
 
-/*Resize the wrap to see the search bar change!*/
 .wrap {
-  width: 40%;
+  width: 50%;
   position: absolute;
-  top: 70%;
-  left: 50%;
+  top: 30%;
+  left: 26%;
   transform: translate(-50%, -50%);
 }
