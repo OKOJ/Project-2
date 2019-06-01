@@ -42,7 +42,7 @@ module.exports = app => {
       }
     }).then(function (dataDb) {
       console.log(dataDb)
-      res.render("searchResults", {
+      res.render("market", {
         items: dataDb
       })
     })

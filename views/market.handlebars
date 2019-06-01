@@ -1,30 +1,27 @@
-<div class="row">
-    <div id="search" class="col-lg-4 col-md-4">
-        <div class="wrap">
-            <form method="POST" action="/api/search">
-                <div class="search">
-                    <input name="productName" type="text" class="searchTerm" placeholder="What are you looking for?">
-                    <button type="submit" class="searchButton">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-    {{!-- <div id="marketpage" class="card-img d-flex">
-        <!--The div element for the map -->
-        <div id="map"></div>
-        <div id="map1"></div>
-    </div> --}}
-
-    <div id="marketpage">
-        <div class="col-md-12 card-img d-flex">
-            <!--The div element for the map -->
-            <div id="map"></div>
-            <div id="map1"></div>
-        </div>
+<div class="row" id="search" >
+    <div class="col-lg-4 col-md-12">
+        <form method="POST" action="/api/search">
+            <div class="search">
+                <input name="productName" type="text" class="searchTerm" placeholder="What are you looking for?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </form>
     </div>
 
+    <div id="marketpage" class="row">
+        {{!-- <div class="row"> --}}
+            <div class="col-md-6 d-flex">
+                <!--The div element for the map -->
+                <div id="map"></div>
+                <div id="map1"></div>
+            </div>
+            <div class="col-md-4">
+                {{>searchResults}}
+            </div>
+        {{!-- </div> --}}
+    </div>
     {{!-- <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fullHeightModalRight">
         Launch demo modal

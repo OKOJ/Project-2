@@ -1,0 +1,30 @@
+    <div id="search-card" class="card">
+
+        <h2>Search results</h2>
+
+        <div class="col-md-2">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        {{!-- <th scope="col">User ID</th> --}}
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each items}}
+                    <tr>
+                        {{!-- <th scope="row">{{id}}</th> --}}
+                        <td>{{text}}</td>
+                        <td>{{price}}</td>
+                        <td>{{quantity}}</td>
+                        <td>{{description}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
