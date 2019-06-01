@@ -1,6 +1,24 @@
-{{#each items}}
-<h1>{{productName}}</h1>
-<h1>{{seller}}</h1>
-<h1>{{quantity}}</h1>
-<h1>{{description}}</h1>
-{{/each}}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Product</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each items}}
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{name}}</td>
+            <td>{{text}}</td>
+            <td>{{price}}</td>
+            <td>{{quantity}}</td>
+            <td>{{description}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
