@@ -113,6 +113,7 @@ h6 {
 .container {
   height: -webkit-fill-available;
   position: relative;
+
 }
 
 .image-container {
@@ -330,31 +331,12 @@ h4.infoWindow {
   font-weight: bold;
 }
 
-/* sign in page end*/
-/* 
-@media screen and (max-width: 839px) {
-  
-}
-
-@media screen and (max-width: 757px) {
-  
-}
-
-@media screen and (max-width: 736px) {
-  
-}
-
-@media screen and (max-width: 500px) {
-  
-} */
-
-
-
 .search {
   width: 100%;
   position: absolute;
   display: flex;
   float: bottom;
+  bottom: 135%;
 }
 
 .searchTerm {
@@ -398,3 +380,22 @@ h4.infoWindow {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
+
+
+/* sign in page end*/
+/* 
+@media screen and (max-width: 839px) {
+  
+}
+
+@media screen and (max-width: 757px) {
+  
+}
+
+@media screen and (max-width: 736px) {
+  
+}
+
+@media screen and (max-width: 500px) {
+  
+} */
