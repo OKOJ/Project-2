@@ -1,9 +1,5 @@
 <div class="row">
-
-    <div id="marketpage" class="card-img d-flex">
-        <!--The div element for the map -->
-        <div id="map"></div>
-        <div id="map1"></div>
+    <div id="search" class="col-lg-4 col-md-4">
         <div class="wrap">
             <form method="POST" action="/api/search">
                 <div class="search">
@@ -15,9 +11,69 @@
             </form>
         </div>
     </div>
+    {{!-- <div id="marketpage" class="card-img d-flex">
+        <!--The div element for the map -->
+        <div id="map"></div>
+        <div id="map1"></div>
+    </div> --}}
+
+    <div id="marketpage">
+        <div class="col-md-12 card-img d-flex">
+            <!--The div element for the map -->
+            <div id="map"></div>
+            <div id="map1"></div>
+        </div>
+    </div>
+
+    {{!-- <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fullHeightModalRight">
+        Launch demo modal
+    </button>
+
+    <div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+        <div class="modal-dialog modal-full-height modal-right" role="modal-dialog">
+
+
+            <div class="modal-content w-50">
+                <div class="modal-header">
+                    <h2 class="modal-title " id="myModalLabel">Product</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                 <!--   {{>example}}  -->
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Full Height Modal Right --> --}}
+
+
 
     <script type="text/javascript" src="/js/signup.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3ov2LRNVa3iSGa0M1JrptzYYeXir3xH8&libraries=places&callback=initMap">
         </script>
 </div>
+
+{{!-- <div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      .col-md-8
+      <div class="row">
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-6">.col-md-6</div>
+      </div>
+    </div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+</div> --}}

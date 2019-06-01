@@ -1,66 +1,48 @@
-<div class="row">
-
-    {{!-- <div class="author-container">
-					<h1>Vendors Name {{user.name}}</h1>
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th># of Posts</th>
-								<th>See Author's Posts</th>
-								<th>New Post</th>
-								<th>Delete Author</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr id="form-row">
-								<form id="author-form">
-									<td colspan="4">
-										<input placeholder="Enter a name" id="author-name" type="text" />
-									</td>
-									<td><button type="submit" class="btn btn-success">Create Author</button>
-									</td>
-								</form>
-							</tr>
-						</tbody>
-					</table>
-				</div> --}}
-    {{!-- <img src="\img\tomatoes-1459069_960_720.jpg" alt=""> --}}
-    <div>
-        {{user.id}}
-    {{user.name}}
-        <ul id="example-list" class="list-group">
-            {{#each user}}
-            {{!-- <li  class="list-group-item mb-2"> --}}
-                <p>{{this.name}}</p>
-                <button class="btn btn-outline-success float-right delete">ｘ</button>
-            {{!-- </li> --}}
-            {{/each}}
-        </
-    </div>
-    {{!-- <div class="card-bod        <h5 class="card-title">name: {{user.id}}</h5>
-        {{#each user}}
-       <p>
-          <strong>ID</strong>: {{example.text}}</p>
-        <p> 
-        <p>
-            <strong>Name</strong>: {{Examples.text}}</p>
-        <p>
-            <strong>Price</strong>: {{example.price}}</p>
-        <p>
-            <strong>Quantity</strong>: {{example.quantity}}</p>
-        <p>
-            <strong>Image</strong>: <img src="{{example.image}}" height="200" alt="Image preview..."></p> 
-        <p>
-            <strong>Description:</strong> {{example.description}}</p>
-        {{/each}}
-    </div> --}}
-
-
+<div id="stand" class="col-md-12"></div>
+<div id="back">
     {{#if user}}
-    <a href="/profile">← Back To Home</a>
+    <a href="/profile">← Back To Profile</a>
     {{/if}}
     {{#unless user}}
-    <a href="/market">← Back To Home</a>
+    <h2>Welcome to {{user.name}} market stand</h2>
+    <a href="/market">← Back To Marketplace</a>
     {{/unless}}
+</div>
+<div class="row">
+    <!-- Grid column -->
+    <div class="col-lg-4 col-md-6">
+
+        <!--Card Narrower-->
+        <div class="card card-cascade narrower">
+
+            <!--Card image-->
+            <div class="view view-cascade overlay">
+                <img src="\img\radish_micros.png" class="card-img-top" alt="narrower">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--/.Card image-->
+
+            <!--Card content-->
+            <div class="card-body card-body-cascade">
+                <!--Title-->
+                <h3 class="card-title">Microgreens</h3>
+                <!--Text-->
+                <ul>
+                    <li><strong>Price</strong>: $ {{example.price}}</li>
+                    <li><strong>Quantity</strong>: {{example.quantity}}</li>                        
+                    <li><strong>Description:</strong> {{example.description}}</li>
+                </ul>
+
+                <button type="submit" id="pickUp" class="btn btn-primary">Pick up</button>
+            </div>
+            <!--/.Card content-->
+
+        </div>
+        <!--/.Card Narrower-->
+
+    </div>
+    <!-- Grid column -->
+</div>
 </div>
