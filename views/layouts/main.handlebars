@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  {{!-- <link href="css/style.css" rel="stylesheet"> --}}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link
@@ -54,13 +64,14 @@
             {{/if}}
           </ul>
         </div>
+        
       </nav>
     </div>
     <!--Navbar-->
-    
-    <div class="main">
+
+    <div class="main overflow-auto">
       <!--Main Page-->
-      <div class="container mt-3">
+      <div class="container mt-5 overflow-auto">
         {{{body}}}
       </div>
       <!--Main Page-->
@@ -177,6 +188,15 @@
 
     </div>
   </div>
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -188,10 +208,10 @@
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3ov2LRNVa3iSGa0M1JrptzYYeXir3xH8&libraries=places&callback=initMap">
     </script>
-  <script src="/js/index.js"></script>
+  <script src="/js/product.js"></script>
   <script src="/js/signup.js"></script>
   <script src="/js/login.js"></script>
-
+  <script src="/js/main.js"></script>
 </body>
 
 </html>
