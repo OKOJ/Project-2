@@ -153,12 +153,10 @@ label {
 }
 
 #back {
+  margin-top: 75px;
   margin-bottom: 25px;
 }
 
-/* .col-md-12 {
-  width: max-content;
-} */
 
 a {
   color: black;
@@ -396,7 +394,7 @@ h4.infoWindow {
 
 /* sign in page end*/
 
-@media screen and (max-width: 989px) {}
+/* @media screen and (max-width: 989px) {}
 
 @media screen and (max-width: 757px) {}
 
@@ -477,4 +475,4 @@ h4.infoWindow {
   .textcontent {
     margin-left: 6%;
   }
-}
+} */

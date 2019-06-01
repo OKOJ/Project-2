@@ -1,0 +1,50 @@
+<div class="col-md-4">
+  <div id="back">
+    {{#if user}}
+    <a href="/profile">← Back To Profile</a>
+    {{/if}}
+
+    {{#unless user}}
+    <a href="/market">← Back To Marketplace</a>
+    {{/unless}}
+
+  </div>
+  <div class="row">
+    <!-- Grid column -->
+    <div class="col-lg-4 col-md-4">
+
+      <!--Card Narrower-->
+      <div class="card card-cascade wider">
+
+        <!--Card image-->
+        <div class="view view-cascade overlay">
+          <img src="\img\pexels-photo-1389103.jpeg" class="card-img-top" alt="narrower">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/.Card image-->
+
+        <!--Card content-->
+        <div class="card-body card-body-cascade">
+          <!--Title-->
+          <h4 class="card-title">{{example.id}}</h4>
+          <!--Text-->
+          <ul>
+            <li><strong>Product</strong>: {{example.text}}</li>
+            <li><strong>Price</strong>: $ {{example.price}}</li>
+            <li><strong>Quantity</strong>: {{example.quantity}}</li>
+            <li><strong>Description</strong>: {{example.description}}</li>
+          </ul>
+          {{!-- <button type="button" class="btn btn-secondary" data-dismiss="card">Close</button> --}}
+          <button type="submit" id="pickUp" data-dismiss="col-lg-4 col-md-4" class="btn btn-primary">Pick up</button>
+        </div>
+        <!--/.Card content-->
+
+      </div>
+      <!--/.Card Narrower-->
+
+    </div>
+    <!-- Grid column -->
+  </div>
+</div>
