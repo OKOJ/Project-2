@@ -352,44 +352,49 @@ h4.infoWindow {
 
 .search {
   width: 100%;
-  position: relative;
+  position: absolute;
   display: flex;
+  float: bottom;
 }
 
 .searchTerm {
-  width: 100%;
+  width: 70%;
   border: 3px solid yellowgreen;
-  ;
   border-right: none;
   padding: 5px;
   height: 35px;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 .searchTerm:focus {
-  color: yellowgreen;
-  ;
+  color: black;
+
 }
 
 .searchButton {
-  width: 30px;
+  width: 40px;
   height: 36px;
   border: 1px solid yellowgreen;
-  ;
   background: yellowgreen;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .wrap {
-  width: 50%;
+  width: 40%;
   position: absolute;
-  top: 30%;
-  left: 26%;
+  top: 55%;
+  left: 20%;
   transform: translate(-50%, -50%);
+  padding-top: 35%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }

@@ -5,24 +5,65 @@ const Op = require("sequelize").Op
 module.exports = app => {
 
 
+  // //Search Bar 
+  // app.post('/api/search', function (req, res) {
+  //   db.Example.findOne({
+  //     productName: req.body.productName
+  //   }).then(function (response) {
+  //     //console.log(response.dataValues)
+  //     // res.render("searchResults", {
+  //     //   items: response
+  //   res.json(response)
+  //     console.log(response)
+  //   }).catch(function(err){
+  //     throw err;
+  //   })
+  // })
+
   //Search Bar 
+  // app.post('/api/search', function (req, res) {
+  //   db.Example.findOne().then(function (response) {
+  //     //console.log(response.dataValues)
+  //     // res.render("searchResults", {
+  //     //   items: response
+  //   res.json(response)
+  //     console.log(response)
+  //   }).catch(function(err){
+  //     throw err;
+  //   })
+  // })
+
+
   app.post('/api/search', function (req, res) {
-    db.Items.findOne({
-      productName: req.body.productName
-    }).then(function (response) {
-      //console.log(response.dataValues)
+    db.Example.findAll({
+      include: [db.User],
+      where: {
+        text: req.body.productName
+      }
+    }).then(function (dataDb) {
+      console.log(dataDb)
       res.render("searchResults", {
-        items: response
+        items: dataDb
       })
     })
+    // db.Example.findOne().then(function (response) {
+    //   //console.log(response.dataValues)
+    //   // res.render("searchResults", {
+    //   //   items: response
+    // res.json(response)
+    //   console.log(response)
+    // }).catch(function(err){
+    //   throw err;
+    // })
   })
-  app.post('/api/items', function (req, res) {
-    db.Items.create(
-      req.body
-    ).then(function (response) {
-      res.json(response)
-    })
-  })
+
+  // app.post('/api/items', function (req, res) {
+  //   db.Example.create(
+  //     req.body
+  //   ).then(function (response) {
+  //     res.json(response)
+  //   })
+  // })
 
 
   // Get all examples
