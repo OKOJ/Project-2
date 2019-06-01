@@ -5,6 +5,16 @@ body {
   height: -webkit-fill-available;
 }
 
+/* marketplace */
+#search{
+  margin-top: 4rem;
+}
+
+#search-card{
+   margin-left: 50px;
+}
+/* marketplace */
+
 .navbar-dark {
   background-color: yellowgreen;
   color: black;
@@ -294,12 +304,17 @@ h1.slider span.next {
 /* sign in page */
 #backbox,
 #frontpage,
-#marketpage,
 #profile-page {
   height: 600px;
   display: inline-flex;
   margin-top: 70px;
   width: 100%;
+}
+#marketpage {
+height: 600px;
+display: inline-flex;
+margin-top: 40px;
+width: 100%;
 }
 
 .row {
@@ -392,11 +407,8 @@ h4.infoWindow {
 }
 
 .search {
-  width: 100%;
-  position: absolute;
+  width: 300px;
   display: flex;
-  float: bottom;
-  bottom: 135%;
 }
 
 
