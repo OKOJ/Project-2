@@ -1,7 +1,7 @@
 <img width="818" alt="Screen Shot 2019-05-26 at 2 29 55 PM" src="https://user-images.githubusercontent.com/43624894/58386840-e1315380-7fc2-11e9-9992-98b8c075d29d.png">
 
 
-###  Project Title
+##  Micro Market
   Interactive web-app which allows home gardeners to sell their garden produce and those that enjoy home-grown fruits, vegetables and flowers to be purchased at their own convenience! Home grown is always better!
 
 #### Getting Started
@@ -13,10 +13,10 @@ What things you need to install the software and how to install them
 Give examples
 
 #### Installing
-1: Copy this repo and clone the copied repo to your computer.
-2: Run npm install, this will install all the npm dependencies from the package.json file.
-3: Install MySQL on your machine, if necessary -> https://www.mysql.com/
-4: Set up your own localhost connection. In each of the .js files in this repo, update the connection setting as follows:
+1 Copy this repo and clone the copied repo to your computer.
+2 Run npm install, this will install all the npm dependencies from the package.json file.
+3 Install MySQL on your machine, if necessary -> https://www.mysql.com/
+4 Set up your own localhost connection. In each of the .js files in this repo, update the connection setting as follows:
 
 var connection = mysql.createConnection({
 host     : 'localhost',
@@ -25,9 +25,9 @@ password : 'enter your password',
 database : "q5ljo6rb17gnu4l6"
 });
 
-5: In MySQL Workbench, import schema.sql and schema-seeds.sql from this reop and run them to uploadthe DB onto
+5 In MySQL Workbench, import schema.sql and schema-seeds.sql from this reop and run them to uploadthe DB onto
 your localhost.
-6: From the command-line,
+6 From the command-line,
   -to interact as a customer, run nodemon server.js to enter Customer Portal, and follow the prompts on-screen. To login, create a new user, buy and sell produce!
   
   -to update and adjust data, it refresh in your browser. 
@@ -40,19 +40,20 @@ your localhost.
 
 --End with an example of getting some data out of the system or using it for a little demo--
 
---#### Deployment--
-Add additional notes about how to deploy this on a live system
+#### Deployment
+[Micro Market](https://daunderdogz.herokuapp.com/) deployed on Heroku.
 
 #### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-Add-On and Plug-Ins
-- Bootstrap
+- Material Design for Bootstrap
 - Google Fonts
+- Handlebars
+- Passport.js
+- Googe Maps API - a [Google Maps key API](https://developers.google.com/maps/documentation/javascript/get-api-key) is required.
 - JQuery
-- Laravel
 - Node
 - MySQL
+- Sequelize
 
 
 # Authors
